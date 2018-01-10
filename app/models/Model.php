@@ -34,7 +34,7 @@ abstract class Model {
 	{
 		foreach ($attributes as $name => $value)
 		{
-			if (in_array($name, $this->fillable)
+			if (in_array($name, $this->fillable))
 			{
 				$this->$name = $value;
 			}
