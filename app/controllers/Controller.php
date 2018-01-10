@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controllers;
+namespace App\Controllers;
 
 /**
  * Classe mère de tous les contrôleurs.
@@ -11,17 +11,17 @@ namespace App\controllers;
 abstract class Controller {
 
 	/**
-	* Paramètres de la requête HHTP
-	* 
-	* @var array
-	*/
+	 * Paramètres de la requête HHTP
+	 * 
+	 * @var array
+	 */
 	protected $request;
 
 	/**
-	* Construit une nouvelle instance de la classe Controller.
-	* 
-	* @param array $request
-	*/
+	 * Construit une nouvelle instance de la classe Controller.
+	 * 
+	 * @param array $request
+	 */
 	public function __construct(array $request)
 	{
 		$this->request = $request;

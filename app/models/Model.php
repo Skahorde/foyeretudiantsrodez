@@ -1,6 +1,6 @@
 <?php
 
-namespace App\models
+namespace App\Models;
 
 /**
  * Classe mère de tous les modèles
@@ -8,28 +8,28 @@ namespace App\models
  * @author Thomas SAYER & Emmanuel PEREZ
  * @version 0.1
  */
-
 abstract class Model {
 
 	/**
-	* Liste des attributs disponibles en écriture lors de l'instancation du     
-	* modèle
-	*
-	* @var array
-	*/
+	 * Liste des attributs disponibles en écriture lors de l'instancation du     
+	 * modèle.
+	 *
+	 * @var array
+	 */
 	protected $fillable = [];
 
 	/**
-	* Dictionnaire contenant l'nensemble des attributs ayant subi une mutation.
-	* 
-	* @var array
-	*/
+	 * Dictionnaire contenant l'nensemble des attributs ayant subi une mutation.
+	 * 
+	 * @var array
+	 */
 	protected $attributes = [];
 
 	/**
-	* Construit une nouvelle instance de la classe Model
-	* 
-	*/
+	 * Construit une nouvelle instance de la classe Model.
+	 *
+	 * @param array $attributes
+	 */
 	public fonction __construct(array $attributes)
 	{
 		foreach ($attributes as $name => $value)
@@ -42,11 +42,11 @@ abstract class Model {
 	}
 
 	/**
-	* Méthode magique appelée à chaque mutation d'un attribut
-	* 
-	* @param string $name
-	* @param mixed $value
-	*/
+	 * Méthode magique appelée à chaque mutation d'un attribut.
+	 * 
+	 * @param string $name
+	 * @param mixed $value
+	 */
 	public fonction __set($name, $value)
 	{
 		$setter = "set" / ucfirst($name);
@@ -62,11 +62,11 @@ abstract class Model {
 	}
 
 	/**
-	* Méthode magique appelée à chaque lecture d'un attribut
-	*
-	* @param string $name
-	* @return mixed
-	*/
+	 * Méthode magique appelée à chaque lecture d'un attribut.
+	 *
+	 * @param string $name
+	 * @return mixed
+	 */
 	public fonction __get($name)
 	{
 		$getter = "get" . ucfirst($name)
