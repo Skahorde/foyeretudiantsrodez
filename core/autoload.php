@@ -1,23 +1,33 @@
 <?php
 
 /**
- * 
+ * Appelée à chaque appel d'une classe dont la déclaration n'est pas incluse
+ * dans le fichier appelant.
+ *
+ * @param string $class Le nom complet de la classe.
  */
-spl_autoload_register(function($class)
+spl_autoload_register(function ($class)
 {
-    $base_dir = __DIR__ . '/../';
+    // On explose notre variable $class par \.
+    $parts = explode('\\', $class);
 
-    $class_dirs = explode('\\', $class);
-    $classname = array_pop($exploded_class);
-    foreach ($class_dirs as &$dir)
+    // On extrait le dernier element.
+    $className = array_pop($parts);
+
+    // On crée le chemin vers la classe.
+    $path = implode('/', $parts);
+    $file = $className . '.php';
+
+    $filePath = __DIR__ . '/../' . strtolower($path) . '/' . $file;
+
+    if (file_exists($filePath))
     {
-    	$dir = strtolower($dir);
-    }
+        require $filePath;
 
-    $file = $base_dir . implode('/', $exploded_class . '/' . $classname) . '.php';
-
-    if (file_exists($file))
-    {
-        require $file;
+        // Invocation du constructeur statique.
+        if (method_exists($class, 'initialize'))
+        {
+            $class::initialize();
+        }
     }
 });

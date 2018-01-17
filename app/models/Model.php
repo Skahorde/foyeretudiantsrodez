@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use App\Converters\StringConverter;
+
 /**
  * Classe mère de tous les modèles
  *
  * @author Thomas SAYER & Emmanuel PEREZ
  * @version 0.1
  */
-abstract class Model {
+abstract class Model implements \JsonSerializable {
 
 	/**
 	 * Liste des attributs disponibles en écriture lors de l'instancation du     
@@ -17,6 +19,13 @@ abstract class Model {
 	 * @var array
 	 */
 	protected $fillable = [];
+
+	/**
+	 * Liste des attributs cachés lors des exports.
+	 * 
+	 * @var array
+	 */
+	protected $hidden = [];
 
 	/**
 	 * Dictionnaire contenant l'nensemble des attributs ayant subi une mutation.
@@ -30,14 +39,11 @@ abstract class Model {
 	 *
 	 * @param array $attributes
 	 */
-	public fonction __construct(array $attributes)
+	public function __construct(array $attributes)
 	{
-		foreach ($attributes as $name => $value)
+		if (!empty($attributes))
 		{
-			if (in_array($name, $this->fillable))
-			{
-				$this->$name = $value;
-			}
+			$this->hydrate($attributes);
 		}
 	}
 
@@ -47,9 +53,9 @@ abstract class Model {
 	 * @param string $name
 	 * @param mixed $value
 	 */
-	public fonction __set($name, $value)
+	public function __set($name, $value)
 	{
-		$setter = "set" / ucfirst($name);
+		$setter = "set" . ucfirst($name);
 
 		if (method_exists($this, $setter))
 		{
@@ -67,7 +73,7 @@ abstract class Model {
 	 * @param string $name
 	 * @return mixed
 	 */
-	public fonction __get($name)
+	public function __get($name)
 	{
 		$getter = "get" . ucfirst($name)
 
@@ -77,6 +83,74 @@ abstract class Model {
 		}
 
 		return $this->attributes[$name];
+	}
+
+	/**
+	 * Hydrate le modèle avec les attributs fournis en paramètre (tableau de
+	 * la forme [name => value]).
+	 * 
+	 * @param array $attributes
+	 */
+	private function hydrate(array $attributes)
+	{
+		foreach ($attributes as $name => $value)
+		{
+			$setter = 'set' . StringConverter::snakeToPascal($name);
+
+			// si un setter existe.
+			if (method_exists($this, $setter))
+			{
+				$this->$setter($value);
+				continue;
+			}
+
+			if (in_array($name, $this->fillable))
+			{
+				$this->attributes[$name] = $value;
+			}
+		}
+	}
+
+	/**
+	 * Transforme l'objet courant en tableau.
+	 *
+	 * @param boolean $ignoreHidden
+	 * @return \App\Models\Model
+	 */
+	public function toArray($ignoreHidden = true)
+	{
+		$array = [];
+
+		foreach ($this->attributes as $name => $value)
+		{
+			if (!in_array($this->hidden, $name))
+			{
+				$array[$name] = $value;
+			}
+		}
+
+		return $array;
+	}
+
+	/**
+	 * Méthode appelée lors de la conversion de l'objet courant au format JSON.
+	 * 
+	 * @return string La représentation JSON de l'objet courant.
+	 */
+	public function jsonSerialize()
+	{
+		return $this->toArray(true);
+	}
+
+	/**
+	 * Appelée lors de la conversion du modèle en chaine de caractères
+	 * (ex.: echo $MODEL_INSTANCE).
+	 * 
+	 * @return string
+	 */
+	public function __toString()
+	{
+		return json_encode($this, JSON_FORCE_OBJECT);
 	}
 
 }
