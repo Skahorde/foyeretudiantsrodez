@@ -2,11 +2,11 @@
 
 html {
 	--primary-color: #2980b9; 
-	--info-color: ##ecf0f1;
+	--info-color: #ecf0f1;
 	--success-color: #27ae60;
 	--warning-color: #f39c12;
 	--danger-color: #c0392b;
-	}
+}
 
 button.rounded-button {
 	border: 2px solid var(--primary-color);
@@ -20,4 +20,6 @@ hr.separator {
 	border: 2px solid;
 }
 
-
+.section-subtitle {
+	max-width: 100px;
+}
