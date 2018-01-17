@@ -14,10 +14,7 @@
 
 					<hr class="separator">
 
-					<p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.</p>
+					<p class="section-subtitle">Bienvenue sur le site du foyer St-Pierre de Rodez.</p>
 
 					<div class="center">
 						<button class="rounded-button" id="about_button">En savoir plus</button>
