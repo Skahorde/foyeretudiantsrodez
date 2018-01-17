@@ -76,7 +76,7 @@ hr.separator {
 	width: 100%;
 	text-align: center;
 	font-size: 80px;
-
+	margin-bottom: auto;
 }
 
 .section-subtitle {
