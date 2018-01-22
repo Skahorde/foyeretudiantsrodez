@@ -24,15 +24,19 @@ body {
 	font-family: Merriweather, "Helvetica Neue", Arial, sans-serif;
 }
 
-button.rounded-button {
+button.rounded-button, a.rounded-button {
 	border: 2px solid var(--primary-color);
 	padding: 15px 30px 15px 30px;
 	background-color: transparent;
 	border-radius: 25px;
 	cursor: pointer;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	text-align: center;
 }
 
-button.rounded-button:hover {
+button.rounded-button:hover, a.rounded-button:hover {
 	background-color: var(--primary-color);
 }
 

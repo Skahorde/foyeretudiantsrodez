@@ -1,4 +1,4 @@
-<section id="contact_section">
+<section id="contacts_section">
 
 	<h1 class="section-title">CONTACTEZ-NOUS</h1>
 	<hr class="separator">
