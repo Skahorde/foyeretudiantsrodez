@@ -1,9 +1,10 @@
 @charset 'UTF-8';
+@import url('home.css');
 
 html {
-	--belize-hole-color: #2980b9; 
-	--clouds-color: #ecf0f1;
-	--black-color: #1e1e1e;
+	--belize-hole-color: #2980B9; 
+	--white-color: #ECF0F1;
+	--black-color: #1E1E1E;
 	--blue-color: #2AA6DC;
 }
 
@@ -32,44 +33,11 @@ button.rounded-button:hover {
 	background-color: var(--blue-color);
 }
 
-#about_button {
-	width: 100%;
-	margin-top: 30px;
-	margin-left: -50%;
-	color: var(--clouds-color);
-	border-color: var(--blue-color);
-}
-
 hr.separator {
 	width: 30px;
 	border: 2px solid var(--blue-color);
 	margin-top: 30px;
 	margin-bottom: 30px;
-}
-
-#home_section {
-	width: 100%;
-	height: 100%;
-    background-image: url(../images/bg-default-bis.jpg);
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-#home_background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, .5);
-	color: var(--clouds-color);
-}
-
-#home_div {
-	margin-top: 15%;
 }
 
 .section-title {
@@ -88,8 +56,7 @@ hr.separator {
 	text-align: center;
 }
 
-.center {
-	width: 200px;
-	margin-left: 50%;
-	margin-right: 50%;
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
 }
