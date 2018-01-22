@@ -31,15 +31,3 @@
 	</div>
 
 </section>
-
-<script type="text/javascript">
-	
-	$(function()
-	{
-		$('.contact-link').each(function()
-		{
-
-		});
-	});
-
-</script>
