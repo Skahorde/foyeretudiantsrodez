@@ -5,6 +5,11 @@
 	color: var(--white-color);
 	border-color: var(--blue-color);
 }
+
+#about_button_container {
+	width: 200px;
+}
+
 #home_section {
 	width: 100%;
 	height: 100%;
