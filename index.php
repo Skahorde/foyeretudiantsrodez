@@ -11,5 +11,7 @@
 	<?php include 'public/views/contacts.php' ?>
 	<?php include 'public/views/footer.php' ?>
 
+	<script type="text/javascript" src="public/js/app.js"></script>
+
 </body>
 </html>
