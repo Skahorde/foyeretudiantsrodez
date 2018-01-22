@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="contact-link">
-			<a href="https://www.facebook.com/foyer.saintpierre">
+			<a href="https://www.facebook.com/foyer.saintpierre" target="_blank">
 				<i class="fa fa-2x fa-facebook-official"></i><br>
 				Foyer Etudiants Saint Pierre
 			</a>

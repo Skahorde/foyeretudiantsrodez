@@ -1,17 +1,17 @@
-<section id="home_section">			
+<header id="home_section">			
 	<div id="home_background">
 		<div id="home_div">
 
 			<p class="section-title">LE FOYER ST-PIERRE</p>
 
-			<hr class="separator">
+			<hr id="home_separator" class="separator">
 
-			<p class="section-subtitle">Bienvenue sur le site du foyer St-Pierre de Rodez.</p>
+			<p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 			<div class="block-center" id="about_button_container">
-				<button class="rounded-button" id="about_button">En savoir plus</button>
+				<button class="rounded-button" id="about_button">EN SAVOIR PLUS</button>
 			</div>
 
 		</div>
 	</div>
-</section>
+</header>
