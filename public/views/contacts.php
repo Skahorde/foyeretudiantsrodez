@@ -5,7 +5,7 @@
 	<h2 class="section-subtitle">
 		Il est possible de nous contacter par email, Facebook ou par téléphone pour toute demande de renseignement et/ou d'inscription.
 	</h2>
-	<div class="container block-center">
+	<div id="contact_links" class="block-center container">
 		
 		<div class="contact-link">
 			<a href="tel:+33565688282">
@@ -31,3 +31,15 @@
 	</div>
 
 </section>
+
+<script type="text/javascript">
+	
+	$(function()
+	{
+		$('.contact-link').each(function()
+		{
+
+		});
+	});
+
+</script>
