@@ -1,6 +1,5 @@
 #about_button {
-	width: 100%;
-	margin-top: 30px;
+	margin-top: 40px;
 	color: var(--white-color);
 	border-color: var(--primary-color);
 }
