@@ -7,8 +7,9 @@
 </head>
 <body>
 
-  <?php include 'public/views/home.php' ?>
+  	<?php include 'public/views/home.php' ?>
 	<?php include 'public/views/contacts.php' ?>
+	<?php include 'public/views/footer.php' ?>
 
 </body>
 </html>
