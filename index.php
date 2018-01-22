@@ -1,11 +1,14 @@
-<!-- HTML -->
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="public/css/app.css"/>
-	</head>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/app.css">
+</head>
+<body>
 
-	<body>
-		<?php include 'public/views/home.php' ?>
-	</body>
+  <?php include 'public/views/home.php' ?>
+	<?php include 'public/views/contacts.php' ?>
+
+</body>
 </html>
