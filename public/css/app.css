@@ -50,17 +50,15 @@ hr.separator {
 	font-size: 18px;
 }
 
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .container {
 	display: -webkit-box;
 	display: -webkit-flex;
   	display: -ms-flexbox;
   	display: flex;
-  	width: 100%;
-}
-
-#contact_section {
-	text-align: center;
-	padding: 60px;
-	background-color: var(--wet-asphalt-color);
-	margin-bottom: 40px;
+  	flex-direction: row;
 }
