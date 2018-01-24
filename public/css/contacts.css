@@ -8,6 +8,29 @@
 	justify-content: center;
 }
 
+.access-links {
+	margin-left: -35px;
+}
+
+.access-links > li {
+	display: inline;
+}
+
+.access-links > li > a {
+	color: var(--white-color);
+	text-decoration: none;
+	opacity: .7;
+	cursor: pointer;
+}
+
+.access-links > li.active > a {
+	opacity: 1;
+}
+
+.access-links > li > a:hover {
+	text-decoration: underline;
+}
+
 .contact-link {
 	margin-left: 25px;
 	margin-right: 25px;
