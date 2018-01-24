@@ -9,7 +9,7 @@
 }
 
 .access-links {
-	margin-left: -35px;
+	margin-left: -40px;
 }
 
 .access-links > li {
@@ -28,7 +28,12 @@
 }
 
 .access-links > li > a:hover {
-	text-decoration: underline;
+	opacity: 1;
+}
+
+.access-links .separator {
+	opacity: .7;
+	color: var(--white-color);
 }
 
 .contact-link {

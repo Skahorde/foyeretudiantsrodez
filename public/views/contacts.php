@@ -9,15 +9,19 @@
 		<ul class="access-links">
 			<li>
 				<a data-destination="Lycée+Charles+Carnus+Rodez">Lycée Charles Carnus</a>
+				<span class="separator">&nbsp;|&nbsp;</span>
 			</li>
 			<li>
-				<a data-destination="Centre+universitaire+Jean-François+Champollion">Fac Champollion</a>
+				<a data-destination="Centre+universitaire+Jean-François+Champollion+Rodez">Fac Champollion</a>
+				<span class="separator">&nbsp;|&nbsp;</span>
 			</li>
 			<li>
 				<a data-destination="IUT+Rodez">IUT</a>
+				<span class="separator">&nbsp;|&nbsp;</span>
 			</li>
 			<li>
 				<a data-destination="IFSI+Rodez">IFSI</a>
+				<span class="separator">&nbsp;|&nbsp;</span>
 			</li>
 			<li>
 				<a data-destination="CCI+Bourran">CCI</a>
