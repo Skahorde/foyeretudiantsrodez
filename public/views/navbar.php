@@ -1,5 +1,5 @@
 <nav id="navbar">
-	<div id="navbar-title"><a class="page-scroll" href="#top">Foyer St-Pierre</a></div>
+	<div id="navbar-title"><a class="page-scroll" href="#home_section">Foyer St-Pierre</a></div>
 
 	<ul id="navbar-ul">
 		<li class="navbar-li"><a class="page-scroll" href="#student_home_section">Le foyer</a></li>
