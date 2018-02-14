@@ -14,7 +14,7 @@
 		<div class="doc">
 				<li>
 					<a href="storage/Fiche de pre-inscription.pdf">
-						<i class="circle-icon fa-3x fa fa-file-pdf-o"></i><br>
+						<i class="fa-3x fa fa-file-pdf-o"></i><br>
 						.pdf
 					</a>
 				</li>
@@ -22,7 +22,7 @@
 		<div class="doc">
 				<li>
 					<a href="storage/Fiche de pre-inscription.doc">
-						<i class="circle-icon fa-3x fa fa-file-text-o"></i><br>
+						<i class="fa-3x fa fa-file-text-o"></i><br>
 						.doc
 					</a>				
 				</li>
@@ -30,7 +30,7 @@
 		<div class="doc">
 				<li>
 					<a href="storage/Fiche de pre-inscription.odt">
-						<i class="circle-icon fa-3x fa fa-file-o"></i><br>
+						<i class="fa-3x fa fa-file-o"></i><br>
 						.odt
 					</a>				
 				</li>
