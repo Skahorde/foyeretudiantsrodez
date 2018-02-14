@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 @import url('home.css');
 @import url('navbar.css');
+@import url('foyer.css');
 @import url('registration.css');
 @import url('contacts.css');
 @import url('footer.css');
@@ -12,6 +13,7 @@
 	--danger-color: #c0392b;
 	--black-color: #1e1e1e;
 	--white-color: #ecf0f1;
+	--darkblue-color: #34495e;
 }
 
 html, body {
@@ -24,6 +26,7 @@ html, body {
 body {
 	color: var(--black-color);
 	font-family: Merriweather, "Helvetica Neue", Arial, sans-serif;
+	list-style: none;
 }
 
 button.rounded-button, a.rounded-button {
@@ -100,4 +103,12 @@ hr.separator {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.circle-icon {
+	border-radius: 1em;
+	border: 3px solid var(--white-color);
+	width: 80px;
+	height: 65px;
+	padding-top: 14px;
 }

@@ -2,20 +2,20 @@
 	text-align: center;
 	padding: 60px;
 	background-color: var(--white-color);
-	color: var(--primary-color);
+	color: var(--darkblue-color);
 }
 
 #title_registration {
-	color: var(--primary-color);
+	color: var(--darkblue-color);
 }
 
 #subtitle_registration {
-	color: var(--primary-color);
+	color: var(--darkblue-color);
 	max-width: 900px;
 }
 
 #subtitle_registration a {
-	color: var(--primary-color) !important;
+	color: var(--darkblue-color) !important;
 	text-decoration: none;
 	opacity: .7;
 }
@@ -31,19 +31,11 @@
 
 #separator_registration {
 	opacity: .7;
-	border-color: var(--primary-color);
+	border-color: var(--darkblue-color);
 }
 
 .arrow-icon {
 	margin: auto;
-}
-
-.circle-icon {
-	border-radius: 1em;
-	border: 3px solid var(--primary-color);
-	width: 80px;
-	height: 65px;
-	padding-top: 14px;
 }
 
 .p-icon {
@@ -69,7 +61,7 @@
 }
 
 .doc a {
-	color: var(--primary-color) !important;
+	color: var(--darkblue-color) !important;
 	text-decoration: none;
 }
 

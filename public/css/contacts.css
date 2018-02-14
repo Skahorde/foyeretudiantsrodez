@@ -1,7 +1,7 @@
 #contacts_section {
 	text-align: center;
 	padding: 60px;
-	background-color: #34495e;
+	background-color: var(--darkblue-color);
 }
 
 #contact_links {
