@@ -10,6 +10,7 @@
   	<?php include 'public/views/home.php' ?>
   	<?php include 'public/views/navbar.php' ?>
   	<?php include 'public/views/foyer.php' ?>
+  	<?php include 'public/views/animations.php' ?>
   	<?php include 'public/views/prices.php' ?>
   	<?php include 'public/views/registration.php' ?>
 	<?php include 'public/views/contacts.php' ?>

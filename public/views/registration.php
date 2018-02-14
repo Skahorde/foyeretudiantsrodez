@@ -1,13 +1,13 @@
 <section id="registration_section">
 
-	<h1 class="section-title" id="title_registration">INSCRIVEZ-VOUS DÈS MAINTENANT</h1>
+	<h2 class="section-title" id="title_registration">INSCRIVEZ-VOUS DÈS MAINTENANT</h1>
 	<hr class="separator" id="separator_registration">
 	
-	<h2 class="section-subtitle" id="subtitle_registration">
+	<p class="section-subtitle" id="subtitle_registration">
 		Vous voulez nous rejoindre ? Rien de plus simple ! Il vous suffit de remplir un formulaire de pré-inscription.<br>
 		Celui-ci est disponible ci-dessous sous différents formats. Merci de nous le retourner une fois complété.<br>
 		(cf. <a class="page-scroll link-registration" href="#contacts_section">contact - accès</a>)
-	</h2>
+	</p>
 
 	<div class="block-center container" id="docs">
 		

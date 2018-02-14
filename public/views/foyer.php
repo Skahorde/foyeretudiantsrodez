@@ -1,12 +1,12 @@
 <section id="student_home_section">
 
-	<h1 class="section-title" id="title_foyer">LE FOYER</h1>
+	<h2 class="section-title" id="title_foyer">LE FOYER</h2>
 	<hr class="separator" id="separator_foyer">
 	
-	<h2 class="section-subtitle" id="subtitle_foyer">
+	<p class="section-subtitle" id="subtitle_foyer">
 		Le Foyer Étudiant St-Pierre est situé dans le quartier de Bourran, aux portes de Rodez.<br>
 		Il bénéficie d'un cadre spatieux et privilégié, offrant aux étudiants une véritable expérience de cohésion de groupe.
-	</h2>
+	</p>
 
 	<div class="block-center container" id="infoboxes">
 		
@@ -36,12 +36,10 @@
 		</div>		
 	</div>
 
-	<h3 class="h3-container">
+	<p class="h3-container">
 		Le Foyer St-Pierre accueille exclusivement des étudiants ou apprentis.
 		Chaque résident possède la clé de sa chambre, lui permettant aussi d'ouvrir la porte d'entrée du bâtiment.
 		Il est possible de rester le week-end, une cuisine étant mise à la disposition de tous.<br>
-		Tous les mercredis soirs, un temps de rencontre est organisée avec les jeunes.
-		D'une soirée film à une sortie bowling, en passant par un atelier débat ou témoignage, ce temps a pour but de développer un esprit d'ouverture aux autres et au monde. 
-	</h3>
+	</p>
 
 </section>
