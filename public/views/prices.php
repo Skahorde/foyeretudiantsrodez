@@ -1,13 +1,13 @@
 <section id="prices_section">
 
-	<h1 class="section-title" id="title_foyer">TARIFS</h1>
+	<p class="section-title" id="title_foyer">TARIFS</p>
 	<hr class="separator" id="separator_foyer">
 	
-	<h2 class="section-subtitle" id="subtitle_foyer">
+	<p class="section-subtitle" id="subtitle_foyer">
 		Voici les tarifs en vigueur pour l'année 2018/2019.<br>
 		Des frais de dossier et d'inscription à hauteur de 54€ sont demandés.<br>
 		Enfin, un dépôt de garantie d'un montant de 338€ est requis.
-	</h2>
+	</p>
 
 	<div class="block-center container" id="infoboxes">
 		
@@ -36,7 +36,7 @@
 		</div>		
 	</div>
 
-	<h3 class="h3-container">
+	<p class="h3-container">
 		<u>Dans le prix sont compris :</u><br><br>
 		Les repas du soir et petits-déjeuners (du lundi au vendredi matin)<br>
 		Les charges (chauffage, eau, électricité)<br>
@@ -45,6 +45,6 @@
 		L'accès à toutes les salles du foyer ( musique, jeux, équipements sportifs...)<br>
 		L'accès à la machine à laver (lessive non fournie)<br>
 		L'accès à toutes les animations et tous les projets du foyer<br>
-	</h3>
+	</p>
 
 </section>

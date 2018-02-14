@@ -1,10 +1,10 @@
 <section id="contacts_section">
 
-	<h1 class="section-title">CONTACTEZ-NOUS</h1>
+	<h2 class="section-title">CONTACTEZ-NOUS</h2>
 	<hr class="separator">
-	<h2 class="section-subtitle">
+	<p class="section-subtitle">
 		Il est possible de nous contacter par email, Facebook ou par téléphone pour toute demande de renseignement et/ou d'inscription.
-	</h2>
+	</p>
 	<div id="access_plan">
 		<ul class="access-links">
 			<li>
