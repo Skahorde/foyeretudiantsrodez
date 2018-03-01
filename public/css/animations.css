@@ -85,7 +85,7 @@
 
 .display-left {
     position: absolute;
-    top: 305%;
+    top: 301%;
     left: 0%;
     transform: translate(0%,-50%);
     -ms-transform: translate(-0%,-50%);
@@ -93,7 +93,7 @@
 
 .display-right {
 	position: absolute;
-	top: 305%;
+	top: 301%;
 	right: 0%;
 	transform: translate(0%,-50%);
 	-ms-transform: translate(0%,-50%);
