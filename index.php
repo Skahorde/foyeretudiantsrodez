@@ -1,21 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="public/css/app.css">
-</head>
-<body>
+<?php
 
-  	<?php include 'public/views/home.php' ?>
-  	<?php include 'public/views/navbar.php' ?>
-	<?php include 'public/views/contacts.php' ?>
-	<?php include 'public/views/footer.php' ?>
+if (session_id() == '')
+{
+	session_start();
+}
 
-	<script type="text/javascript" src="public/js/jquery.min.js"></script>
-	<script type="text/javascript" src="public/js/page-scroll.js"></script>
-	<script type="text/javascript" src="public/js/app.js"></script>
-	<script type="text/javascript" src="public/js/contacts.js"></script>
+// Permet de contrôler la faille CSRF.
+$_SESSION['token'] = md5(uniqid(rand(), true));
 
-</body>
-</html>
+// Récupère la configuration de base de l'application.
+$app = parse_ini_file(__DIR__ . '/config/app.ini');
+
+// Permet l'auto-chargement des classes.
+include __DIR__ . '/core/autoload.php';
+
+if (isset($_GET['page']) && $_GET['page'] == 'administration')
+{
+	$user = \App\Repositories\UserRepository::getInstance()->getCurrent();
+
+	// Si un utilisateur est connecté.
+	if (isset($user))
+	{
+		include __DIR__ . '/public/views/administration/shell.php';
+	}
+	else
+	{
+		include __DIR__ . '/public/views/administration/sign_in.php';
+	}
+}
+else
+{
+	include __DIR__ . '/public/views/website/shell.php';
+}

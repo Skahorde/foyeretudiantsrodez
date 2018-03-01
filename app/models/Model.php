@@ -75,7 +75,7 @@ abstract class Model implements \JsonSerializable {
 	 */
 	public function __get($name)
 	{
-		$getter = "get" . ucfirst($name)
+		$getter = "get" . ucfirst($name);
 
 		if (method_exists($this, $getter))
 		{

@@ -99,7 +99,86 @@ class AjaxHandler {
 		$this->$action();
 	}
 
+	/**
+	 * Effectue l'opération de connexion d'un utilisateur à la page d'admin.
+	 */
+	private function getAdminSignIn()
+	{
+		(new SignInController($this->request))->signIn();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration des contacts.
+	 */
+	private function getAdminContactsPage()
+	{
+		(new ContactsController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration de l'accueil.
+	 */
+	private function getAdminHomePage()
+	{
+		(new HomeController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration de la
+	 * section "Le Foyer".
+	 */
+	private function getAdminStudentHomePage()
+	{
+		(new StudentHomeController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration de la
+	 * section des tarifs.
+	 */
+	private function getAdminPricesPage()
+	{
+		(new PricesController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération de modification des informations de contact.
+	 */
+	private function putContacts()
+	{
+		(new ContactsController($this->request))->update();
+	}
+
+	/**
+	 * Effectue l'opération de modification des informations affichées sur la
+	 * section d'accueil.
+	 */
+	private function putHome()
+	{
+		(new HomeController($this->request))->update();
+	}
+
+	/**
+	 * Effectue l'opération de modification des informations affichées sur la
+	 * section "Le Foyer".
+	 */
+	private function putStudentHome()
+	{
+		(new StudentHomeController($this->request))->update();
+	}
+
+	/**
+	 * Effectue l'opération de modification des informations affichées sur la
+	 * section des tarifs.
+	 */
+	private function putPrices()
+	{
+		(new PricesController($this->request))->update();
+	}
+
 }
+
+$request = [ ];
 
 switch ($_SERVER['REQUEST_METHOD'])
 {
@@ -109,7 +188,7 @@ switch ($_SERVER['REQUEST_METHOD'])
 		break;
 	case 'PUT':
 	case 'DELETE':
-		file_get_contents('php://input', $request);
+		parse_str(file_get_contents('php://input'), $request);
 		break;
 }
 

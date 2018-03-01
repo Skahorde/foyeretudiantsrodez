@@ -1,0 +1,17 @@
+#prices_section .success-alert {
+	margin-bottom: 20px;
+}
+
+#prices_administration_form .error-alert {
+	width: calc(100% - 160px);
+	margin-left: auto;
+}
+
+#prices_administration_form label {
+	margin-bottom: 10px;
+	width: 100px;
+}
+
+#prices_administration_form input[type="number"] {
+	width: calc(100% - 132px);
+}

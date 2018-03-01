@@ -9,7 +9,7 @@
 }
 
 #home_section {
-	background-image: url('../images/bg-default.jpg');
+	background-image: url('../../images/bg-default.jpg');
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

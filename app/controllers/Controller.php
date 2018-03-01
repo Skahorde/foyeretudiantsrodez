@@ -169,6 +169,13 @@ abstract class Controller {
 									$errors[$field][] = isset($message) ? $message : "{$this->request[$field]} n'est pas au format JJ/MM/AAAA !";
 								}
 								break;
+							case 'Y-m-d':
+								$d = \DateTime::createFromFormat($value, $this->request[$field]);
+								if (!$d || $d->format($value) != $this->request[$field])
+								{
+									$errors[$field][] = isset($message) ? $message : "{$this->request[$field]} n'est pas au format AAAA-MM-JJ !";
+								}
+								break;
 							default :
 								$this->response("Format $value inconnu !", 500);
 								break;
