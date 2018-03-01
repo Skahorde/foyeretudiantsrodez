@@ -3,15 +3,14 @@
 }
 
 #prices_administration_form .error-alert {
-	width: calc(100% - 160px);
+	width: calc(100% - 200px);
 	margin-left: auto;
 }
 
 #prices_administration_form label {
-	margin-bottom: 10px;
-	width: 100px;
+	width: 140px;
 }
 
 #prices_administration_form input[type="number"] {
-	width: calc(100% - 132px);
+	width: calc(100% - 172px);
 }

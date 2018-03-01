@@ -17,7 +17,7 @@
 
 			<div class="form-group">
 				<label>* Description</label>
-				<textarea name="home_description" placeholder="Description"><?= $home_description ?></textarea>
+				<textarea name="home_description" placeholder="Description"><?= htmlspecialchars($home_description) ?></textarea>
 				<div class="error-alert hidden"></div>
 			</div>
 

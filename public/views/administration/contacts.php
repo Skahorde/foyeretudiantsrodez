@@ -17,19 +17,19 @@
 
 			<div class="form-group">
 				<label>*&nbsp;&nbsp;<i class="fa fa-2x fa-phone"></i></label>
-				<input type="text" name="phone_number" value="<?= $phone_number ?>" placeholder="N° de téléphone">
+				<input type="text" name="phone_number" value="<?= htmlspecialchars($phone_number) ?>" placeholder="N° de téléphone">
 				<div class="error-alert hidden"></div>
 			</div>
 
 			<div class="form-group">
 				<label>*&nbsp;&nbsp;<i class="fa fa-2x fa-facebook"></i></label>
-				<input type="text" name="facebook_link" value="<?= $facebook_link ?>" placeholder="Facebook">
+				<input type="text" name="facebook_link" value="<?= htmlspecialchars($facebook_link) ?>" placeholder="Facebook">
 				<div class="error-alert hidden"></div>
 			</div>
 
 			<div class="form-group">
 				<label>*&nbsp;&nbsp;<i class="fa fa-2x fa-envelope-o"></i></label>
-				<input type="text" name="email_address" value="<?= $email_address ?>" placeholder="Email">
+				<input type="text" name="email_address" value="<?= htmlspecialchars($email_address) ?>" placeholder="Email">
 				<div class="error-alert hidden"></div>
 			</div>
 
