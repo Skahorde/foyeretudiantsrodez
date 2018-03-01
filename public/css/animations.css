@@ -1,6 +1,6 @@
 #animations_section {
-	text-align: center;
 	padding-top: 60px;
+	text-align: center;	
 	background-color: var(--white-color);
 	color: var(--darkblue-color);
 }
@@ -9,9 +9,9 @@
 	color: var(--darkblue-color);
 }
 
-#subtitle_animations {
-	color: var(--darkblue-color);
+#subtitle_animations {	
 	max-width: 900px;
+	color: var(--darkblue-color);
 }
 
 #subtitle_animations a {
@@ -30,31 +30,137 @@
 }
 
 #separator_animations {
+	border-color: var(--darkblue-color);	
 	opacity: .7;
-	border-color: var(--darkblue-color);
 }
 
 .fullwidth-slider-container {
+	align-content: center;
 	width: 100%;
-	height: 500px;
-	margin-top: 60px;
-	background-color: var(--black-color) !important;
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+.fullwidth-slider-container ul {
+	width: 100%;
+	max-height: 658.4px;
+	margin: 0px;
+	padding-left: 0px;
+	list-style: none;
+}
+
+.fullwidth-slider-container li {
+	margin: auto;
+	height: 100%;
+	width: 100%;
 }
 
 .slider-title {
 	top: 0;
 	width: 100%;
-	padding-top: 20px;
 	font-size: 32px;
 	text-align: center;
+	color: var(--darkblue-color);
+	margin-bottom: 20px;
 }
 
-.slider-ul {
-	height: 350px;
+.slider-image {
+	width: 50%;
+	margin: auto;
 }
 
-.slider-description {
+.background-image {
 	width: 100%;
-	text-align: center;
-	padding-bottom: 40px; 
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.center-image {
+	height: 100%;	
+	background-color: rgba(255, 255, 255, 0.7);
+	display: flex;  justify-content: center;
+    align-items: center;
+}
+
+.display-left {
+    position: absolute;
+    top: 305%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%);
+}
+
+.display-right {
+	position: absolute;
+	top: 305%;
+	right: 0%;
+	transform: translate(0%,-50%);
+	-ms-transform: translate(0%,-50%);
+}
+
+.button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color: var(--white-color) !important;
+	background-color: var(--black-color) !important;
+
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button:hover {
+	color: var(--black-color) !important;
+	background-color: var(--white-color) !important;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    margin: 0;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+#bg1 {
+	background-image: url('../images/animations/1.jpg');
+}
+
+#bg2 {
+	background-image: url('../images/animations/2.jpg');
+}
+
+#bg3 {
+	background-image: url('../images/animations/3.jpg');
+}
+
+#bg4 {
+	background-image: url('../images/animations/4.jpg');
 }
