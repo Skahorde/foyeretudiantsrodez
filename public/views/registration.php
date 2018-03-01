@@ -13,7 +13,7 @@
 		
 		<div class="doc">
 				<li>
-					<a href="storage/Fiche de pre-inscription.pdf">
+					<a href="public/files/Fiche de pre-inscription.pdf">
 						<i class="fa-3x fa fa-file-pdf-o"></i><br>
 						.pdf
 					</a>
@@ -21,7 +21,7 @@
 		</div>
 		<div class="doc">
 				<li>
-					<a href="storage/Fiche de pre-inscription.doc">
+					<a href="public/files/Fiche de pre-inscription.doc">
 						<i class="fa-3x fa fa-file-text-o"></i><br>
 						.doc
 					</a>				
@@ -29,7 +29,7 @@
 		</div>
 		<div class="doc">
 				<li>
-					<a href="storage/Fiche de pre-inscription.odt">
+					<a href="public/files/Fiche de pre-inscription.odt">
 						<i class="fa-3x fa fa-file-o"></i><br>
 						.odt
 					</a>				
