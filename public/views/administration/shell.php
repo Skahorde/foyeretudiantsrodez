@@ -26,7 +26,7 @@
 				Le Foyer
 			</a>
 		</li>
-		<li>
+		<li class="active">
 			<a href="view:animations">
 				<i class="fa fa-gamepad"></i>&nbsp;&nbsp;
 				Les animations
@@ -44,7 +44,7 @@
 				L'avis des étudiants
 			</a>
 		</li>
-		<li class="active">
+		<li>
 			<a href="view:prices">
 				<i class="fa fa-credit-card"></i>&nbsp;&nbsp;
 				Les tarifs

@@ -1,0 +1,11 @@
+#animations_administration_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#animations_administration_table td, #animations_administration_table th {
+	border: solid var(--primary-color) 1px;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}

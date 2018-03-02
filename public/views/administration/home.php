@@ -16,7 +16,7 @@
 		<form id="home_administration_form" class="horizontal-form" method="put">
 
 			<div class="form-group">
-				<label>* Description</label>
+				<label>Description *</label>
 				<textarea name="home_description" placeholder="Description"><?= htmlspecialchars($home_description) ?></textarea>
 				<div class="error-alert hidden"></div>
 			</div>

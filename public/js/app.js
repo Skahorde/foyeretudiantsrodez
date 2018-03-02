@@ -6,9 +6,8 @@
  *
  * @see https://fr.wikipedia.org/wiki/Cross-site_scripting
  * 
- * @param {String} text Texte à convertir.
- * 
- * @return {String} Texte convertit.
+ * @param {String} text
+ * @return {String}
  */
 function escapeHtml(text)
 {
@@ -65,7 +64,7 @@ $.ajaxSetup({
 /**
  * Retourne la chaine de caractères avec la première lettre en minuscule.
  * 
- * @return {String} La chaine de caractères avec la première lettre en minuscule.
+ * @return {String}
  */
 String.prototype.lcfirst = function()
 {
@@ -77,7 +76,7 @@ String.prototype.lcfirst = function()
 /**
  * Retourne la chaine de caractères avec la première lettre en majuscule.
  * 
- * @return {String} La chaine de caractères avec la première lettre en majuscule.
+ * @return {String}
  */
 String.prototype.ucfirst = function()
 {
@@ -91,7 +90,7 @@ String.prototype.ucfirst = function()
  * chaque nouveau mot avec la première lettre en majuscule. Aucun caractère
  * particulier !) de la chaine de caractères.
  * 
- * @return {String} Chaine de caractères convertie en camelCase.
+ * @return {String}
  */
 String.prototype.toCamelCase = function()
 {
@@ -103,7 +102,7 @@ String.prototype.toCamelCase = function()
  * première lettre en majuscule. Aucun caractère particulier !) de la chaine de
  * caractères.
  * 
- * @return {String} Chaine de caractères convertie en PascalCase.
+ * @return {String}
  */
 String.prototype.toPascalCase = function()
 {

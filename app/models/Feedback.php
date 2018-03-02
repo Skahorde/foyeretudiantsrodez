@@ -19,5 +19,6 @@ class FeedBack extends Model {
 		'id',
 		'content',
 		'first_name',
+		'page_id',
 	];
 }

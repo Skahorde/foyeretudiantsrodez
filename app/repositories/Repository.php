@@ -84,16 +84,9 @@ abstract class Repository
 		$valuesName = implode(',', array_map(function($f) { return ":$f"; }, $fieldsName));
 		$fieldsName = implode(',', $fieldsName);
 
-		$returning = '';
-		if (!is_array($this->primaryKey))
-		{
-			$returning = "RETURNING $this->primaryKey";
-		}
-
 		$st = self::$pdo->prepare(
 			"INSERT INTO $this->table
-			 ($fieldsName) VALUES ($valuesName)
-			 $returning;"
+			 ($fieldsName) VALUES ($valuesName);"
 		);
 
 		foreach ($values as $key => $value)
@@ -106,10 +99,9 @@ abstract class Repository
 
 		$result = $st->rowCount() > 0;
 
-		// Si une ligne a été insérée et que la requête retourne l'ID.
-		if ($result && !empty($returning))
+		if ($result)
 		{
-			$result = $st->fetch(\PDO::FETCH_ASSOC)[$this->primaryKey];
+			$result = $this->find(self::$pdo->lastInsertId());
 		}
 
 		$st->closeCursor();

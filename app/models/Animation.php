@@ -3,7 +3,7 @@
 namespace App\Models;
 
 /**
- * Représente un avis d'étudiant.
+ * Représente une animation.
  *
  * @version 0.1
  */
@@ -20,5 +20,6 @@ class Animation extends Model {
 		'title',
 		'description',
 		'picture_url',
+		'page_id',
 	];
 }

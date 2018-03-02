@@ -134,6 +134,15 @@ class AjaxHandler {
 
 	/**
 	 * Effectue l'opération d'affichage de la page d'administration de la
+	 * section "Les animations".
+	 */
+	private function getAdminAnimationsPage()
+	{
+		(new AnimationsController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration de la
 	 * section des tarifs.
 	 */
 	private function getAdminPricesPage()
@@ -165,6 +174,22 @@ class AjaxHandler {
 	private function putStudentHome()
 	{
 		(new StudentHomeController($this->request))->update();
+	}
+
+	/**
+	 * Effectue l'opération de création d'une animation.
+	 */
+	private function postAnimation()
+	{
+		(new AnimationsController($this->request, $_FILES))->create();
+	}
+
+	/**
+	 * Effectue l'opération de suppression d'une animation.
+	 */
+	private function deleteAnimation()
+	{
+		(new AnimationsController($this->request, $_FILES))->delete();
 	}
 
 	/**
