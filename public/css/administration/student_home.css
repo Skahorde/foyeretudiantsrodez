@@ -1,0 +1,12 @@
+#student_home_section .success-alert {
+	margin-bottom: 20px;
+}
+
+#student_home_administration_form label {
+	margin-bottom: 10px;
+	clear: both;
+}
+
+#student_home_administration_form textarea, #student_home_administration_form input {
+	width: calc(100% - 10px);
+}

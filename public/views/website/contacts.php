@@ -24,7 +24,7 @@
 				<span class="separator">&nbsp;|&nbsp;</span>
 			</li>
 			<li>
-				<a data-destination="CCI+Bourran">CCI</a>
+				<a data-destination="5+Rue+de+Bruxelles+Rodez">CCI</a>
 			</li>
 		</ul>
 		<div class="google-maps">

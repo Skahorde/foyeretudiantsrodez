@@ -18,21 +18,21 @@ abstract class Model implements \JsonSerializable {
 	 *
 	 * @var array
 	 */
-	protected $fillable = [];
+	protected $fillable = [ ];
 
 	/**
 	 * Liste des attributs cachés lors des exports.
 	 * 
 	 * @var array
 	 */
-	protected $hidden = [];
+	protected $hidden = [ ];
 
 	/**
 	 * Dictionnaire contenant l'nensemble des attributs ayant subi une mutation.
 	 * 
 	 * @var array
 	 */
-	protected $attributes = [];
+	protected $attributes = [ ];
 
 	/**
 	 * Construit une nouvelle instance de la classe Model.
@@ -75,7 +75,7 @@ abstract class Model implements \JsonSerializable {
 	 */
 	public function __get($name)
 	{
-		$getter = "get" . ucfirst($name)
+		$getter = "get" . ucfirst($name);
 
 		if (method_exists($this, $getter))
 		{
@@ -123,7 +123,7 @@ abstract class Model implements \JsonSerializable {
 
 		foreach ($this->attributes as $name => $value)
 		{
-			if (!in_array($this->hidden, $name))
+			if (!in_array($name, $this->hidden))
 			{
 				$array[$name] = $value;
 			}

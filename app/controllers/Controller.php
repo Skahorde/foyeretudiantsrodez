@@ -11,30 +11,38 @@ namespace App\Controllers;
 abstract class Controller {
 
 	/**
-	 * Paramètres de la requête HHTP
+	 * Paramètres de la requête HTTP.
 	 * 
 	 * @var array
 	 */
 	protected $request;
 
 	/**
+	 * Fichiers envoyés dans la requête HTTP.
+	 * 
+	 * @var array
+	 */
+	protected $files;
+
+	/**
 	 * Construit une nouvelle instance de la classe Controller.
 	 * 
 	 * @param array $request
+	 * @param array $files
 	 */
-	public function __construct(array $request)
+	public function __construct(array $request, array $files = [ ])
 	{
 		$this->request = $request;
+		$this->files   = $files;
 	}
 
 	/**
 	 * Permet d'inclure (d'afficher) une vue.
 	 * 
-	 * @param string Nom de la vue à inclure (elle se trouve dans le dossier
-	 * 				 "public/views").
-	 * @param array  Ensemble des variables à inclure dans la vue.
+	 * @param string
+	 * @param array
 	 */
-	protected function display($view, array $variables = [])
+	protected function display($view, array $variables = [ ])
 	{
 		foreach ($variables as $name => $value)
 		{
@@ -47,8 +55,8 @@ abstract class Controller {
 	/**
 	 * Affiche une réponse à l'écran et définie un code HTTP de retour.
 	 * 
-	 * @param string  $content    Contenu de la réponse à afficher.
-	 * @param integer $statusCode Code retour HTTP.
+	 * @param string  $content
+	 * @param integer $statusCode
 	 */
 	protected function response($content, $statusCode = 200)
 	{
@@ -66,7 +74,7 @@ abstract class Controller {
 	 * champs n'est pas valide, affiche un message d'erreur à l'écran en
 	 * spécifiant le code HTTP 400 Bad Request.
 	 * 
-	 * @param array $rulesPerField Ensemble des règles par champ de la requête.
+	 * @param array $rulesPerField
 	 */
 	protected function validate(array $rulesPerField)
 	{
@@ -169,9 +177,22 @@ abstract class Controller {
 									$errors[$field][] = isset($message) ? $message : "{$this->request[$field]} n'est pas au format JJ/MM/AAAA !";
 								}
 								break;
+							case 'Y-m-d':
+								$d = \DateTime::createFromFormat($value, $this->request[$field]);
+								if (!$d || $d->format($value) != $this->request[$field])
+								{
+									$errors[$field][] = isset($message) ? $message : "{$this->request[$field]} n'est pas au format AAAA-MM-JJ !";
+								}
+								break;
 							default :
 								$this->response("Format $value inconnu !", 500);
 								break;
+						}
+						break;
+					case 'file':
+						if ($value === true && !array_key_exists($field, $this->files))
+						{
+							$errors[$field][] = isset($message) ? $message : "Le fichier $field n'a pas été envoyé.";
 						}
 						break;
 					default:

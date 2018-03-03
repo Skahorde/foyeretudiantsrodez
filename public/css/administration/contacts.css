@@ -1,0 +1,17 @@
+#contacts_section .success-alert {
+	margin-bottom: 20px;
+}
+
+#contacts_administration_form .error-alert {
+	width: calc(100% - 100px);
+	margin-left: auto;
+}
+
+#contacts_administration_form input[type="text"] {
+	width: calc(100% - 90px);
+}
+
+#contacts_administration_form label {
+	width: 50px;
+	text-align: center;
+}

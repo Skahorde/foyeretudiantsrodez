@@ -14,9 +14,10 @@ interface Singleton {
 	/**
 	 * Retourne l'instance Singleton de la classe ou en crée une nouvelle si
 	 * aucune einstance n'existe.
-	 * 
+	 *
+	 * @static
 	 * @return mixed
 	 */
-	public function getInstance();
+	public static function getInstance();
 
 }

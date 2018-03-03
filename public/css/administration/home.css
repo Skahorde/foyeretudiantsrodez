@@ -1,0 +1,12 @@
+#home_section .success-alert {
+	margin-bottom: 20px;
+}
+
+#home_administration_form label {
+	margin-bottom: 10px;
+	clear: both;
+}
+
+#home_administration_form textarea {
+	width: calc(100% - 10px);
+}

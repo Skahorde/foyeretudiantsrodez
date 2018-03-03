@@ -1,13 +1,4 @@
 @charset 'UTF-8';
-@import url('home.css');
-@import url('navbar.css');
-@import url('foyer.css');
-@import url('animations.css');
-@import url('prices.css');
-@import url('feedbacks.css');
-@import url('registration.css');
-@import url('contacts.css');
-@import url('footer.css');
 
 :root {
 	--primary-color: #2980b9; 
@@ -32,6 +23,10 @@ body {
 	list-style: none;
 }
 
+a {
+	cursor: pointer;
+}
+
 button.rounded-button, a.rounded-button {
 	border: 2px solid var(--primary-color);
 	padding: 15px 30px 15px 30px;
@@ -46,33 +41,29 @@ button.rounded-button, a.rounded-button {
 
 button.rounded-button:hover, a.rounded-button:hover {
 	background-color: var(--primary-color);
+	color: var(--white-color);
 }
 
-hr.separator {
-	width: 30px;
-	border: 2px solid var(--white-color);
-}
-  
-.section-title {
-	font-weight: bold;
-	color: var(--white-color);
-	width: 100%;
-	text-align: center;
-	font-size: 80px;
-	margin-bottom: auto;
-	margin-top: 0;
+form div.form-group {
+	margin-bottom: 20px;
 }
 
-.section-subtitle {
-	max-width: 600px;
-	color: var(--white-color);
-	margin-left: auto;
-	margin-right: auto;
-	font-weight: lighter;
-	font-size: 18px;
-	margin-bottom: 30px;
-	text-align: center;
-	opacity: .9;
+input[type="text"], input[type="password"], input[type="number"], textarea {
+	padding: 5px;
+	border-radius: 5px;
+	border: solid #CCC 1px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, textarea:focus {
+	border: solid var(--primary-color) 1px;
+}
+
+input.has-error, textarea.has-error {
+	border: solid var(--danger-color) 1px;
+}
+
+.hidden {
+	display: none;
 }
 
 .block-center {
@@ -89,23 +80,81 @@ hr.separator {
   	flex-wrap: wrap;
 }
 
-.google-maps {
-    position: relative;
-    padding-bottom: 35%;
-    height: 0;
-    overflow: hidden;
+.nav-stacked {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 22%;
+	background-color: var(--black-color);
+	min-height: 100%;
 }
 
-.google-maps iframe {
-    position: absolute;
-	top: 0;
-    left: 0;
-    right: 0;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.nav-stacked li {
+	padding: 15px;
+}
+
+.nav-stacked li a {
+    display: block;
+    color: var(--white-color);
+    opacity: .7;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.nav-stacked li a:hover {
+    opacity: 1;
+}
+
+.nav-stacked li.active {
+    background-color: var(--primary-color);
+}
+
+.nav-stacked li.active a {
+	opacity: 1;
+	font-size: 1em;
+}
+
+.nav-stacked li.brand {
+	text-align: center;
+	opacity: 1;
+	color: var(--white-color);
+	font-size: 1.1em;
+	padding: 50px;
+}
+
+.nav-stacked li.brand small {
+	display: block;
+	opacity: .7;
+	margin-top: 10px;
+}
+
+.nav-stacked li.sign-out {
+	position: absolute;
+	bottom: 0;
+}
+
+.horizontal-form label {
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+
+.error-alert {
+	border-radius: 15px;
+	border: solid var(--danger-color) 1px;
+	color: var(--danger-color);
+	font-size: .8em;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.success-alert {
+	border-radius: 15px;
+	border: solid var(--success-color) 1px;
+	color: var(--success-color);
+	font-size: .8em;
+	font-weight: bold;
+	padding: 20px;
 }
 
 .circle-icon {
