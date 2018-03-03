@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="public/js/jquery.min.js"></script>
 	<script type="text/javascript" src="public/js/page-scroll.js"></script>
 	<script type="text/javascript" src="public/js/app.js"></script>
+	<script type="text/javascript" src="public/js/navbar.js"></script>
 	<script type="text/javascript" src="public/js/contacts.js"></script>
 	<script type="text/javascript" src="public/js/animations.js"></script>
 	<script type="text/javascript" src="public/js/feedbacks.js"></script>
