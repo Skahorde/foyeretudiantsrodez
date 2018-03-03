@@ -6,7 +6,11 @@
 
 			<hr id="home_separator" class="separator">
 
-			<p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p class="section-subtitle">
+				Bienvenue sur le site du foyer St-Pierre !<br>
+				Vous souhaitez nous rejoindre ou simplement en savoir plus ?<br>
+				Cliquez sur le bouton ci-dessous et laissez vous guider.
+			</p>
 
 			<div class="block-center" id="about_button_container">
 				<a class="rounded-button page-scroll" id="about_button" href="#student_home_section">EN SAVOIR PLUS</a>
