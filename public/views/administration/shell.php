@@ -14,7 +14,7 @@
 			Le Foyer St-Pierre <br>
 			<small>Page d'administration</small>
 		</li>
-		<li>
+		<li class="active">
 			<a href="view:home">
 				<i class="fa fa-home"></i>&nbsp;&nbsp;
 				Accueil
@@ -26,7 +26,7 @@
 				Le Foyer
 			</a>
 		</li>
-		<li class="active">
+		<li>
 			<a href="view:animations">
 				<i class="fa fa-gamepad"></i>&nbsp;&nbsp;
 				Les animations
