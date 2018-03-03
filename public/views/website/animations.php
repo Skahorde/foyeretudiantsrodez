@@ -16,53 +16,26 @@
 	</p>
 
 	<div class="fullwidth-slider-container">
-		<button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
-  		<button class="button display-right" onclick="plusDivs(1)">&#10095;</button>
 		<ul>
-			<li class="element">
-				<p class="slider-title">
-					Accrobranche
-				</p>
+			<?php foreach ($animations as $animation): ?>
 
-				<div id="bg1" class="background-image">
-					<div class="center-image">
-						<img class="slider-image" src="public/images/animations/1.jpg">
-					</div>
-				</div>			
-			</li>
-			<li class="element">
-				<p class="slider-title">
-					Nouvel an chinois
-				</p>
+				<li class="element">
 
-				<div id="bg2" class="background-image">
-					<div class="center-image">
-						<img class="slider-image" src="public/images/animations/2.jpg">
-					</div>
-				</div>
-			</li>
-			<li class="element">
-				<p class="slider-title">
-					Tournoi sportif
-				</p>
+					<p class="slider-title">
+						<a class="button" onclick="plusDivs(-1)">&#10094;</a>
+  						&nbsp;&nbsp;<?= $animation->title ?>&nbsp;&nbsp;
+  						<a class="button" onclick="plusDivs(1)">&#10095;</a>
+					</p>
 
-				<div id="bg3" class="background-image">
-					<div class="center-image">
-						<img class="slider-image" src="public/images/animations/3.jpg">
+					<div class="background-image" style="background-image: url(<?= $animation->picture_url ?>)">
+						<div class="center-image">
+							<img class="slider-image" src="<?= $animation->picture_url ?>">
+						</div>
 					</div>
-				</div>
-			</li>
-			<li class="element">
-				<p class="slider-title">
-					Débat
-				</p>
 
-				<div id="bg4" class="background-image">
-					<div class="center-image">
-						<img class="slider-image" src="public/images/animations/4.jpg">
-					</div>
-				</div>
-			</li>
+				</li>
+
+			<?php endforeach; ?>
 		</ul>
 
 	</div>

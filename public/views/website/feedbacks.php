@@ -7,17 +7,14 @@
 		Retrouvez les avis laissés sur notre Livre d'Or par d'anciens ou d'actuels étudiants logés au Foyer.<br>
 	</p>
 
-	<div class="slideshow" id="feedbacks">
-		<ul>
-			<li class="feedback">				
-				<p class="content"> La vie au foyer St Pierre : des moments conviviaux de partage, l'occasion de faire de magnifiques rencontres !</p>
-				<p class="name">- Manon</p>
-			</li>
-			<br>
-			<li class="feedback">				
-				<p class="content">Le foyer St Pierre c'est génial! La vie est belle, l'ambiance est super, on fait des rencontres magiques, on passe de super moments. Quand on y est on ne veut pas repartir! Je le conseille à tous!</p>
-				<p class="name">- Coralie</p>
-			</li>
+	<div id="feedbacks">
+		<ul class="container">
+			<?php foreach ($feedbacks as $feedback): ?>
+				<li class="feedback">				
+					<p class="content"><?= $feedback->content ?></p>
+					<p class="name">&mdash; <?= $feedback->first_name ?></p>
+				</li>
+			<?php endforeach; ?>
 		</ul>
 	</div>
 

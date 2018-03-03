@@ -20,8 +20,8 @@
 					<th>
 						<a id="create_feedback_button"><i class="fa fa-plus"></i></a>
 					</th>
-					<th>Titre</th>
-					<th>Description</th>
+					<th>Titre *</th>
+					<th>Description *</th>
 				</tr>
 			</thead>
 

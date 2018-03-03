@@ -20,16 +20,15 @@
 					<th>
 						<a id="create_animation_button"><i class="fa fa-plus"></i></a>
 					</th>
-					<th>Titre</th>
-					<th>Description</th>
-					<th>Image</th>
+					<th>Titre *</th>
+					<th>Image *</th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<?php if (empty($animations)): ?>
 					<tr class="empty-table">
-						<td colspan="4">Aucune animation enregistrée.</td>
+						<td colspan="3">Aucune animation enregistrée.</td>
 					</tr>
 				<?php endif; ?>
 				<?php foreach ($animations as $animation): ?>
@@ -40,7 +39,6 @@
 							</a>
 						</td>
 						<td><?= htmlspecialchars($animation->title) ?></td>
-						<td><?= htmlspecialchars($animation->description) ?></td>
 						<td>
 							<img src="<?= $animation->picture_url ?>" alt="<?= $animation->title ?>" width="50">
 						</td>

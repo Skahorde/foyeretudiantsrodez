@@ -44,7 +44,7 @@ class AnimationRepository extends Repository implements Singleton
 	public function latest()
 	{
 		$st = self::$pdo->prepare(
-			"SELECT id, title, description, picture_url
+			"SELECT id, title, picture_url
 			 FROM $this->table
 			 WHERE page_id = (
 			     SELECT id FROM pages ORDER BY created_the DESC LIMIT 1

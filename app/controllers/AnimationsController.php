@@ -70,7 +70,6 @@ class AnimationsController extends Controller {
 	{
 		$this->validate([
 			'title'       => [ 'required' => true ],
-			'description' => [ 'required' => true ],
 			'picture'     => [ 'file' => true ],
 		]);
 
@@ -91,7 +90,6 @@ class AnimationsController extends Controller {
 
 		$animation = new Animation([
 			'title'       => $this->request['title'],
-			'description' => $this->request['description'],
 			'picture_url' => $picture->url,
 			'page_id'     => 1,
 		]);

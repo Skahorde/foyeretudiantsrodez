@@ -71,30 +71,41 @@ class PlacesController extends Controller {
 		$this->validate([
 			'title'       => [ 'required' => true ],
 			'description' => [ 'required' => true ],
-			'picture'     => [ 'file' => true ],
+			'picture_1'   => [ 'file' => true ],
 		]);
 
-		$file = $this->storage->incomingFiles($this->files)[0];
+		$pictures = [ ];
+		$files = $this->storage->incomingFiles($this->files);
 
-		$picture = new File($file['tmp_name'], $file['name']);
-
-		// Si l'image n'a pas correctement été envoyée.
-		if ($file['error'] != UPLOAD_ERR_OK)
+		foreach ($files as $file)
 		{
-			$this->response("Une erreur innatendue s'est produite lors du téléchargement de l'image !", 500);
-		}
+			$picture = new File($file['tmp_name'], $file['name']);
 
-		if ($this->storage->move($picture, realpath(__DIR__ . '/../../storage')) === false)
-		{
-			$this->response("Une erreur innatendue s'est produite lors du déplacement de l'image !", 500);
+			// Si l'image n'a pas correctement été envoyée.
+			if ($file['error'] != UPLOAD_ERR_OK)
+			{
+				$this->response("Une erreur innatendue s'est produite lors du téléchargement de l'image !", 500);
+			}
+
+			if ($this->storage->move($picture, realpath(__DIR__ . '/../../storage')) === false)
+			{
+				$this->response("Une erreur innatendue s'est produite lors du déplacement de l'image !", 500);
+			}
+
+			$pictures[] = $picture;
 		}
 
 		$place = new Place([
 			'title'       => $this->request['title'],
 			'description' => $this->request['description'],
-			'picture_url' => $picture->url,
 			'page_id'     => 1,
 		]);
+
+		foreach ($pictures as $key => $picture)
+		{
+			$field = 'picture_' . ($key + 1) . '_url';
+			$place->$field = $picture->url;
+		}
 
 		$place = $this->places->create($place);
 
@@ -125,17 +136,25 @@ class PlacesController extends Controller {
 			$this->response("Une erreur innatendue s'est produite lors de la suppression du lieu !", 500);
 		}
 
-		$picture = new File(
-			str_replace(
-				'http://' . $_SERVER['SERVER_NAME'],
-				$_SERVER['DOCUMENT_ROOT'],
-				$place->picture_url
-			)
-		);
-
-		if ($this->storage->destroy($picture->filepath) === false)
+		for ($i = 0; $i < 3; $i++)
 		{
-			$this->response("Une erreur innatendue s'est produite lors de la suppression de l'image sur le serveur !", 500);
+			$field = 'picture_' . ($i + 1) . '_url';
+
+			$picture = new File(
+				str_replace(
+					'http://' . $_SERVER['SERVER_NAME'],
+					$_SERVER['DOCUMENT_ROOT'],
+					$place->$field
+				)
+			);
+
+			if (is_file($picture->filepath))
+			{
+				if ($this->storage->destroy($picture->filepath) === false)
+				{
+					$this->response("Une erreur innatendue s'est produite lors de la suppression de l'image sur le serveur !", 500);
+				}
+			}
 		}
 	}
 }

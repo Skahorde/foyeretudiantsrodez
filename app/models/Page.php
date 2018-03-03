@@ -18,13 +18,11 @@ class Page extends Model {
 	protected $fillable = [
 		'id',
 		'home_description',
-		'home_alert',
 		'student_home_description',
 		'student_home_rooms_number',
 		'student_home_start_date',
 		'student_home_end_date',
 		'student_home_optional_text',
-		'animations_description',
 		'cost_per_week',
 		'fees',
 		'guarantee',

@@ -45,25 +45,21 @@
 
 
 #feedbacks {
-	justify-content: center;
+	font-style: italic;
+	color: var(--darkblue-color);
+	width: 100%;
 }
 
-.slideshow {
+#feedbacks ul {
    width: 100%;
-   overflow: hidden;
-   color: var(--black-color);
-   font-style: italic;
-}
-
-.slideshow ul {
-   width: 100%;
-   padding:0; margin:auto;
    list-style: none;
+   justify-content: center;
 }
 
-.slideshow li {
-	max-width: 600px;
-	margin: auto;
+#feedbacks li {
+	text-align: left;
+	max-width: 400px;
+	margin: auto 20px;
 }
 
 .name {

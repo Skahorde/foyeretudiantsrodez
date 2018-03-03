@@ -44,7 +44,7 @@ class PlaceRepository extends Repository implements Singleton
 	public function latest()
 	{
 		$st = self::$pdo->prepare(
-			"SELECT id, title, description, picture_url
+			"SELECT id, title, description, picture_1_url, picture_2_url, picture_3_url
 			 FROM $this->table
 			 WHERE page_id = (
 			     SELECT id FROM pages ORDER BY created_the DESC LIMIT 1

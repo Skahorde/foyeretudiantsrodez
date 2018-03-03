@@ -83,49 +83,13 @@
     align-items: center;
 }
 
-.display-left {
-    position: absolute;
-    top: 301%;
-    left: 0%;
-    transform: translate(0%,-50%);
-    -ms-transform: translate(-0%,-50%);
-}
-
-.display-right {
-	position: absolute;
-	top: 301%;
-	right: 0%;
-	transform: translate(0%,-50%);
-	-ms-transform: translate(0%,-50%);
-}
-
 .button {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    color: var(--white-color) !important;
-	background-color: var(--black-color) !important;
-
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    background-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
+    color: var(--black-color);
+    opacity: .7;
 }
 
 .button:hover {
-	color: var(--black-color) !important;
-	background-color: var(--white-color) !important;
+	opacity: 1;
 }
 
 button, html [type="button"], [type="reset"], [type="submit"] {
@@ -138,29 +102,4 @@ button, select {
 
 button, input {
     overflow: visible;
-}
-
-button, input, select, textarea {
-    font: inherit;
-    margin: 0;
-}
-
-*, ::before, ::after {
-    box-sizing: inherit;
-}
-
-#bg1 {
-	background-image: url('../images/animations/1.jpg');
-}
-
-#bg2 {
-	background-image: url('../images/animations/2.jpg');
-}
-
-#bg3 {
-	background-image: url('../images/animations/3.jpg');
-}
-
-#bg4 {
-	background-image: url('../images/animations/4.jpg');
 }

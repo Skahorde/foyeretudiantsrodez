@@ -19,7 +19,9 @@ class Place extends Model {
 		'id',
 		'title',
 		'description',
-		'picture_url',
+		'picture_1_url',
+		'picture_2_url',
+		'picture_3_url',
 		'page_id',
 	];
 }

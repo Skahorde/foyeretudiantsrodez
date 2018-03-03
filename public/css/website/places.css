@@ -56,11 +56,3 @@
 	padding-top: 20px;
 	color: var(--white-color);
 }
-
-.disp-none p {
-	display: none;
-}
-
-.disp-none img {
-	display: none;
-}

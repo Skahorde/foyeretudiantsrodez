@@ -18,7 +18,6 @@ class Animation extends Model {
 	protected $fillable = [
 		'id',
 		'title',
-		'description',
 		'picture_url',
 		'page_id',
 	];

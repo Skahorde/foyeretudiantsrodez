@@ -5,7 +5,7 @@ function emptyTable()
 {
 	$('#places_administration_table tbody').html(
 		'<tr class="empty-table">' +
-			'<td colspan="4">' +
+			'<td colspan="6">' +
 				'Aucun lieu enregistré.' +
 			'</td>' +
 		'</tr>'
@@ -39,7 +39,13 @@ $(function()
 					'<textarea name="description" placeholder="Description"></textarea>' +
 				'</td>' +
 				'<td>' +
-					'<input type="file" name="picture">' +
+					'<input type="file" name="pictures[]">' +
+				'</td>' +
+				'<td>' +
+					'<input type="file" name="pictures[]">' +
+				'</td>' +
+				'<td>' +
+					'<input type="file" name="pictures[]">' +
 				'</td>' +
 			'</tr>'
 		);
@@ -87,7 +93,9 @@ $(function()
 		formData.append('action', 'place');
 		formData.append('title', tr.find('input[name="title"]').val());
 		formData.append('description', tr.find('textarea[name="description"]').val());
-		formData.append('picture', tr.find('input[name="picture"]')[0].files[0]);
+		formData.append('picture_1', tr.find('input[name="pictures[]"]')[0].files[0]);
+		formData.append('picture_2', tr.find('input[name="pictures[]"]')[1].files[0]);
+		formData.append('picture_3', tr.find('input[name="pictures[]"]')[2].files[0]);
 
 		$.ajax({
 			type: 'post',
@@ -107,7 +115,13 @@ $(function()
 						'<td>' + escapeHtml(place.title) + '</td>' +
 						'<td>' + escapeHtml(place.description) + '</td>' +
 						'<td>' +
-							'<img src="' + place.picture_url + '" alt="' + place.title + '" width="50">' +
+							'<img src="' + place.picture_1_url + '" alt="' + place.title + ' (1)" width="50">' +
+						'</td>' +
+						'<td>' +
+							'<img src="' + place.picture_2_url + '" alt="' + place.title + ' (2)" width="50">' +
+						'</td>' +
+						'<td>' +
+							'<img src="' + place.picture_3_url + '" alt="' + place.title + ' (3)" width="50">' +
 						'</td>' +
 					'</tr>'
 				);

@@ -76,7 +76,6 @@ class StudentHomeController extends Controller {
 				'required' => true,
 				'format'   => 'Y-m-d',
 			],
-			'student_home_optional_text' => [ 'required' => true ],
 		]);
 
 		$this->pages->update(1, [

@@ -1,10 +1,10 @@
-$('div').click(function() {
-    if($(this).hasClass('red'))
-    {
-        $(this).addClass('blue').removeClass('red');
-    }
-    else
-    {
-       $(this).addClass('red').removeClass('blue');
-    }
-  });
+$(function()
+{
+	$('.places-links a').on('click', function()
+	{
+		$('#places_container li').addClass('hidden');
+		$('#place_' + $(this).data('place-index')).removeClass('hidden');
+		$('.places-links a').removeClass('active-link');
+		$(this).addClass('active-link');
+	});
+});

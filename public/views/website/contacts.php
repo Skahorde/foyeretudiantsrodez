@@ -34,23 +34,23 @@
 	<div id="contact_links" class="block-center container">
 		
 		<div class="contact-link">
-			<a href="tel:+33565688282">
+			<a href="tel:<?= str_replace(' ', '', $phone_number) ?>">
 				<i class="fa fa-2x fa-phone"></i><br>
-				+33 5 65 68 82 82
+				<?= $phone_number ?>
 			</a>
 		</div>
 
 		<div class="contact-link">
-			<a href="https://www.facebook.com/foyer.saintpierre" target="_blank">
+			<a href="<?= $facebook_link ?>" target="_blank">
 				<i class="fa fa-2x fa-facebook-official"></i><br>
 				Foyer Etudiants Saint Pierre
 			</a>
 		</div>
 
 		<div class="contact-link">
-			<a href="mailto:foyeretudiants@gmail.com">
+			<a href="mailto:<?= $email_address ?>">
 				<i class="fa fa-2x fa-envelope-o"></i><br>
-				foyeretudiants@gmail.com
+				<?= $email_address ?>
 			</a>
 		</div>
 

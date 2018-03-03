@@ -5,11 +5,11 @@
 	
 	<p class="section-subtitle" id="subtitle_foyer">
 		Voici les tarifs en vigueur pour l'année 2018/2019.<br>
-		Des frais de dossier et d'inscription à hauteur de 54€ sont demandés.<br>
-		Enfin, un dépôt de garantie d'un montant de 338€ est requis.
+		Des frais de dossier et d'inscription à hauteur de <?= $fees ?>€ sont demandés.<br>
+		Enfin, un dépôt de garantie d'un montant de <?= $guarantee ?>€ est requis.
 	</p>
 
-	<div class="block-center container" id="infoboxes">
+	<div class="block-center container" id="prices_infoboxes">
 		
 		<div class="infobox">
 				<li>					
@@ -20,9 +20,7 @@
 		<div class="infobox">
 				<li>
 					<i class="circle-icon fa-3x fa fa-eur"></i><br>
-					<p class="p-icon">429€ / mois<br>
-					ou<br>
-					122€ / semaine</p>
+					<p class="p-icon"><?= $cost_per_week ?>€ / semaine</p>
 				</li>					
 		</div>
 		<div class="infobox">
@@ -36,7 +34,7 @@
 		</div>		
 	</div>
 
-	<p class="h3-container">
+	<p>
 		<u>Dans le prix sont compris :</u><br><br>
 		Les repas du soir et petits-déjeuners (du lundi au vendredi matin)<br>
 		Les charges (chauffage, eau, électricité)<br>

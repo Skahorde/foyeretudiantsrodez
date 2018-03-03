@@ -7,9 +7,7 @@
 			<hr id="home_separator" class="separator">
 
 			<p class="section-subtitle">
-				Bienvenue sur le site du foyer St-Pierre !<br>
-				Vous souhaitez nous rejoindre ou simplement en savoir plus ?<br>
-				Cliquez sur le bouton ci-dessous et laissez vous guider.
+				<?= $home_description ?>
 			</p>
 
 			<div class="block-center" id="about_button_container">

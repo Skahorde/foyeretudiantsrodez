@@ -5,7 +5,7 @@ function emptyTable()
 {
 	$('#animations_administration_table tbody').html(
 		'<tr class="empty-table">' +
-			'<td colspan="4">' +
+			'<td colspan="3">' +
 				'Aucune animation enregistrée.' +
 			'</td>' +
 		'</tr>'
@@ -34,9 +34,6 @@ $(function()
 				'</td>' +
 				'<td>' +
 					'<input type="text" name="title" placeholder="Titre">' +
-				'</td>' +
-				'<td>' +
-					'<textarea name="description" placeholder="Description"></textarea>' +
 				'</td>' +
 				'<td>' +
 					'<input type="file" name="picture">' +
@@ -86,7 +83,6 @@ $(function()
 		let formData = new FormData();
 		formData.append('action', 'animation');
 		formData.append('title', tr.find('input[name="title"]').val());
-		formData.append('description', tr.find('textarea[name="description"]').val());
 		formData.append('picture', tr.find('input[name="picture"]')[0].files[0]);
 
 		$.ajax({
@@ -105,7 +101,6 @@ $(function()
 							'</a>' +
 						'</td>' +
 						'<td>' + escapeHtml(animation.title) + '</td>' +
-						'<td>' + escapeHtml(animation.description) + '</td>' +
 						'<td>' +
 							'<img src="' + animation.picture_url + '" alt="' + animation.title + '" width="50">' +
 						'</td>' +

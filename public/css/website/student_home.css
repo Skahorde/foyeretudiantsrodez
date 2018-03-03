@@ -42,6 +42,10 @@
 	display: inline;
 }
 
+.infobox i {
+	margin-bottom: 10px;
+}
+
 .arrow-icon {
 	margin: auto;
 }
