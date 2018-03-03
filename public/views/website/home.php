@@ -13,7 +13,7 @@
 			</p>
 
 			<div class="block-center" id="about_button_container">
-				<a class="rounded-button page-scroll" id="about_button" href="#student_home_section">EN SAVOIR PLUS</a>
+				<a class="rounded-button page-scroll" id="about_button" href="#navbar">EN SAVOIR PLUS</a>
 			</div>
 
 		</div>

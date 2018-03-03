@@ -57,3 +57,5 @@
 	</div>
 
 </section>
+
+<script type="text/javascript" src="public/js/website/contacts.js"></script>

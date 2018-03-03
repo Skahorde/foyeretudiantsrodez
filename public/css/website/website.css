@@ -1,5 +1,12 @@
 @import url('../app.css');
 @import url('home.css');
+@import url('navbar.css');
+@import url('student_home.css');
+@import url('animations.css');
+@import url('places.css');
+@import url('feedbacks.css');
+@import url('prices.css');
+@import url('registration.css');
 @import url('contacts.css');
 @import url('footer.css');
 

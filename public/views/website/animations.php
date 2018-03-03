@@ -68,3 +68,5 @@
 	</div>
 
 </section>
+
+<script type="text/javascript" src="public/js/website/animations.js"></script>

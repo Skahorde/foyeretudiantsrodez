@@ -9,14 +9,20 @@
 </head>
 <body>
 
-  	<?php include __DIR__ . '/home.php' ?>
-	<?php include __DIR__ . '/contacts.php' ?>
-	<?php include __DIR__ . '/footer.php' ?>
-
 	<script type="text/javascript" src="public/js/jquery.min.js"></script>
 	<script type="text/javascript" src="public/js/app.js"></script>
 	<script type="text/javascript" src="public/js/website/page-scroll.js"></script>
-	<script type="text/javascript" src="public/js/website/contacts.js"></script>
+
+  	<?php (new \App\Controllers\HomeController())->section() ?>
+  	<?php include __DIR__ . '/navbar.php' ?>
+  	<?php (new \App\Controllers\StudentHomeController())->section() ?>
+  	<?php (new \App\Controllers\AnimationsController())->section() ?>
+  	<?php (new \App\Controllers\PlacesController())->section() ?>
+  	<?php (new \App\Controllers\FeedbacksController())->section() ?>
+  	<?php (new \App\Controllers\PricesController())->section() ?>
+  	<?php include __DIR__ . '/registration.php' ?>
+  	<?php (new \App\Controllers\ContactsController())->section() ?>
+	<?php include __DIR__ . '/footer.php' ?>
 
 </body>
 </html>

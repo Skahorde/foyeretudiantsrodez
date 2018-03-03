@@ -96,3 +96,5 @@
 	</div>
 
 </section>
+
+<script type="text/javascript" src="public/js/website/places.js"></script>

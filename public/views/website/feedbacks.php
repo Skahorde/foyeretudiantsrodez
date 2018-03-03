@@ -22,3 +22,5 @@
 	</div>
 
 </section>
+
+<script type="text/javascript" src="public/js/website/feedbacks.js"></script>

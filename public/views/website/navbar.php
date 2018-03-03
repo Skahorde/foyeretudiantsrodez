@@ -12,3 +12,4 @@
 	
 </nav>
 
+<script type="text/javascript" src="public/js/website/navbar.js"></script>
