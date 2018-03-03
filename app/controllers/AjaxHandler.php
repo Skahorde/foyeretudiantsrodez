@@ -201,6 +201,13 @@ class AjaxHandler {
 		(new PricesController($this->request))->update();
 	}
 
+	/**
+	 * Effectue l'opération de déconnexion de l'utilisateur courant.
+	 */
+	private function putSignOut()
+	{
+		(new SignOutController($this->request))->signOut();
+	}
 }
 
 $request = [ ];

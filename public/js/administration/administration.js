@@ -23,4 +23,18 @@ $(function()
 
 		e.preventDefault();
 	});
+
+	$('#administration_nav .sign-out > a').on('click', function()
+	{
+		$.ajax({
+			type: 'put',
+			data: {
+				action: 'sign_out'
+			},
+			success: function(response)
+			{
+				window.location.reload();
+			}
+		});
+	});
 });
