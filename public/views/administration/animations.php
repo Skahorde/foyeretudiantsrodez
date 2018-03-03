@@ -13,7 +13,7 @@
 		
 		<div class="success-alert hidden">L'opération s'est parfaitement déroulée !</div>
 
-		<table id="animations_administration_table">
+		<table id="animations_administration_table" class="administration-table">
 			
 			<thead>
 				<tr>

@@ -2,20 +2,20 @@
 
 namespace App\Repositories;
 
-use App\Models\Animation;
+use App\Models\Place;
 use Core\Singleton;
 
 /**
- * Représente un entrepôt de données sur la table des animations.
+ * Représente un entrepôt de données sur la table des lieux.
  *
  * @version 0.1
  */
-class AnimationRepository extends Repository implements Singleton
+class PlaceRepository extends Repository implements Singleton
 {
 	/**
 	 * Instance Singleton.
 	 * 
-	 * @var \App\Repository\AnimationRepository
+	 * @var \App\Repository\PlaceRepository
 	 */
 	private static $instance;
 
@@ -24,7 +24,7 @@ class AnimationRepository extends Repository implements Singleton
 	 * aucune instance n'existe.
 	 *
 	 * @static
-	 * @return \App\Repository\AnimationRepository
+	 * @return \App\Repository\PlaceRepository
 	 */
 	public static function getInstance()
 	{
@@ -37,7 +37,7 @@ class AnimationRepository extends Repository implements Singleton
 	}
 
 	/**
-	 * Récupère les animations de la dernière version du OnePage.
+	 * Récupère les lieux de la dernière version du OnePage.
 	 * 
 	 * @return array
 	 */
@@ -51,21 +51,21 @@ class AnimationRepository extends Repository implements Singleton
 			 )"
 		);
 		$st->execute() || print_r(self::$pdo->errorInfo());
-		$animations = $st->fetchAll(\PDO::FETCH_ASSOC);
+		$places = $st->fetchAll(\PDO::FETCH_ASSOC);
 		$st->closeCursor();
 
-		if ($animations === false)
+		if ($places === false)
 		{
 			return [ ];
 		}
 
-		// Transformation de toutes les animations en instances du modèle
-		// \App\Models\Animation.
-		foreach ($animations as &$animation)
+		// Transformation de toutes les lieux en instances du modèle
+		// \App\Models\Place.
+		foreach ($places as &$place)
 		{
-			$animation = new Animation($animation);
+			$place = new Place($place);
 		}
 
-		return $animations;
+		return $places;
 	}
 }

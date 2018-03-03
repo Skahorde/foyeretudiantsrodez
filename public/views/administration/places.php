@@ -1,4 +1,4 @@
-<section id="animations_section">
+<section id="places_section">
 
 	<header class="section-header">
 		
@@ -13,12 +13,12 @@
 		
 		<div class="success-alert hidden">L'opération s'est parfaitement déroulée !</div>
 
-		<table id="animations_administration_table">
+		<table id="places_administration_table" class="administration-table">
 			
 			<thead>
 				<tr>
 					<th>
-						<a id="create_animation_button"><i class="fa fa-plus"></i></a>
+						<a id="create_place_button"><i class="fa fa-plus"></i></a>
 					</th>
 					<th>Titre</th>
 					<th>Description</th>
@@ -27,22 +27,22 @@
 			</thead>
 
 			<tbody>
-				<?php if (empty($animations)): ?>
+				<?php if (empty($places)): ?>
 					<tr class="empty-table">
-						<td colspan="4">Aucune animation enregistrée.</td>
+						<td colspan="4">Aucun lieu enregistré.</td>
 					</tr>
 				<?php endif; ?>
-				<?php foreach ($animations as $animation): ?>
-					<tr id="animation_<?= $animation->id ?>">
+				<?php foreach ($places as $place): ?>
+					<tr id="place_<?= $place->id ?>">
 						<td>
 							<a class="remove-button">
 								<i class="fa fa-times"></i>
 							</a>
 						</td>
-						<td><?= htmlspecialchars($animation->title) ?></td>
-						<td><?= htmlspecialchars($animation->description) ?></td>
+						<td><?= htmlspecialchars($place->title) ?></td>
+						<td><?= htmlspecialchars($place->description) ?></td>
 						<td>
-							<img src="<?= $animation->picture_url ?>" alt="<?= $animation->title ?>" width="50">
+							<img src="<?= $place->picture_url ?>" alt="<?= $place->title ?>" width="50">
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -54,4 +54,4 @@
 
 </section>
 
-<script type="text/javascript" src="public/js/administration/animations.js"></script>
+<script type="text/javascript" src="public/js/administration/places.js"></script>

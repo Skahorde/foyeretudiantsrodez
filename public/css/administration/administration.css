@@ -1,7 +1,6 @@
 @import url('../app.css');
 @import url('home.css');
 @import url('student_home.css');
-@import url('animations.css');
 @import url('prices.css');
 @import url('contacts.css');
 @import url('sign_in.css');
@@ -63,4 +62,16 @@
 
 .update-button:hover {
 	opacity: 1;
+}
+
+.administration-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.administration-table td, .administration-table th {
+	border: solid var(--primary-color) 1px;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
 }

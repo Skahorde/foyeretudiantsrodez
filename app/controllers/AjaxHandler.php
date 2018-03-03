@@ -143,6 +143,24 @@ class AjaxHandler {
 
 	/**
 	 * Effectue l'opération d'affichage de la page d'administration de la
+	 * section "Les lieux".
+	 */
+	private function getAdminPlacesPage()
+	{
+		(new PlacesController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration de la
+	 * section "L'avis des étudiants".
+	 */
+	private function getAdminFeedbacksPage()
+	{
+		(new FeedbacksController($this->request))->administration();
+	}
+
+	/**
+	 * Effectue l'opération d'affichage de la page d'administration de la
 	 * section des tarifs.
 	 */
 	private function getAdminPricesPage()
@@ -190,6 +208,38 @@ class AjaxHandler {
 	private function deleteAnimation()
 	{
 		(new AnimationsController($this->request, $_FILES))->delete();
+	}
+
+	/**
+	 * Effectue l'opération de création d'un lieu.
+	 */
+	private function postPlace()
+	{
+		(new PlacesController($this->request, $_FILES))->create();
+	}
+
+	/**
+	 * Effectue l'opération de suppression d'un lieu.
+	 */
+	private function deletePlace()
+	{
+		(new PlacesController($this->request, $_FILES))->delete();
+	}
+
+	/**
+	 * Effectue l'opération de création d'un avis.
+	 */
+	private function postFeedback()
+	{
+		(new FeedbacksController($this->request))->create();
+	}
+
+	/**
+	 * Effectue l'opération de suppression d'un avis.
+	 */
+	private function deleteFeedback()
+	{
+		(new FeedbacksController($this->request))->delete();
 	}
 
 	/**
