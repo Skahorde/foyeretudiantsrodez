@@ -8,7 +8,7 @@
 	<div id="places_links_container">
 		<ul class="places-links">
 			<li>
-				<a class="active">Les extérieurs</a>
+				<a class="active-link">Les extérieurs</a>
 				<span class="separator">&nbsp;|&nbsp;</span>
 			</li>
 			<li>

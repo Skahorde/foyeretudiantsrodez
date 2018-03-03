@@ -16,7 +16,7 @@
 	cursor: pointer;
 }
 
-.places-links > li > a.active {
+.places-links > li > a.active-link {
 	opacity: 1;
 }
 
