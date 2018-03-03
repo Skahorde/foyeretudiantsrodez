@@ -1,4 +1,4 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+/* Déroulement du menu responsive */
 function menu() {
     var x = document.getElementById("navbar");
     if (x.className === "topnav") {
@@ -8,6 +8,9 @@ function menu() {
     }
 } 
 
+/**
+ * Application de la classe sticky lors du dépassement de la navbar.
+ */
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -20,9 +23,3 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-
-$(document).ready(function() {
-  // get current URL path and assign 'active' class
-  var pathname = window.location.pathname;
-  $('.navbar > a[href="'+pathname+'"]').parent().addClass('active');
-})
